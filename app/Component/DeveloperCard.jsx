@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const DeveloperCard = ({ developer }) => {
   const { name, designation, company, experience, skills, story } = developer;
 
@@ -31,9 +33,11 @@ const DeveloperCard = ({ developer }) => {
       <p className="text-gray-700 text-sm leading-relaxed">{story}</p>
 
       {/* Button */}
-      <button className="mt-5 w-full bg-sky-500 hover:bg-sky-600 text-white py-2 rounded-xl font-semibold transition">
-        View Profile
-      </button>
+      <Link href={`/stories/${developer.id}`}>
+        <button className=" mt-3 w-full bg-sky-500 hover:bg-sky-600 text-white py-4 px-2 rounded-xl font-semibold transition">
+          View Details
+        </button>
+      </Link>
     </div>
   );
 };
