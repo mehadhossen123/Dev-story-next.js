@@ -1,10 +1,18 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
     return (
       <div>
-        <header className="mx-4 my-3 border border-b-gray-200">
-          <h1 className="text-white text-lg font-bold"> Name</h1>{" "}
+        <header className="px-8 my-3 border border-b-gray-200 flex flex-wrap justify-between">
+          <Link href={"/"}>Dev-story</Link>
+          <nav className='space-x-2'>
+            <Link href="/about">About</Link>
+            <Link href="/login">Login</Link>
+            <Link href="/register">Register</Link>
+            <Link href="/stories">Stories</Link>
+            
+          </nav>
         </header>
       </div>
     );
